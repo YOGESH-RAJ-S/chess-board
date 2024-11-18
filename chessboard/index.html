@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Chessboard</title>
+    <style>
+        html {
+            background: gray;
+        }
+
+        body {
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            border: 1px solid black;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-auto-rows: 1fr;
+            width: 90vw;
+            max-width: 800px;
+            aspect-ratio: 1;
+            border: 1px solid black;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: calc(7vw / 1.2); /* Adjust font size relative to the viewport */
+            color: chocolate;
+        }
+
+        .black {
+            background: black;
+        }
+
+        .box:hover {
+            color: aqua;
+            background-color: brown;
+        }
+
+        @media (max-width: 600px) {
+            .box {
+                font-size: calc(8vw); /* Increase font size for smaller screens */
+            }
+        }
+        @media (min-width: 1024px) {
+            .board {
+                width: 600px; /* Set a fixed size for laptops/desktops */
+            }
+
+            .box {
+                font-size: 40px; /* Set consistent font size for larger screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="board">
+        <!-- First row -->
+        <div class="box">&#9814</div>
+        <div class="box black">&#9816</div>
+        <div class="box">&#9815</div>
+        <div class="box black">&#9813</div>
+        <div class="box">&#9812</div>
+        <div class="box black">&#9815</div>
+        <div class="box">&#9816</div>
+        <div class="box black">&#9814</div>
+
+        <!-- Second row -->
+        <div class="box black">&#9817</div>
+        <div class="box">&#9817</div>
+        <div class="box black">&#9817</div>
+        <div class="box">&#9817</div>
+        <div class="box black">&#9817</div>
+        <div class="box">&#9817</div>
+        <div class="box black">&#9817</div>
+        <div class="box">&#9817</div>
+
+        <!-- Empty rows -->
+        <div class="box"></div>
+        <div class="box black"></div>
+        <div class="box"></div>
+        <div class="box black"></div>
+        <div class="box"></div>
+        <div class="box black"></div>
+        <div class="box"></div>
+        <div class="box black"></div>
+
+        <div class="box black"></div>
+        <div class="box"></div>
+        <div class="box black"></div>
+        <div class="box"></div>
+        <div class="box black"></div>
+        <div class="box"></div>
+        <div class="box black"></div>
+        <div class="box"></div>
+
+        <div class="box"></div>
+        <div class="box black"></div>
+        <div class="box"></div>
+        <div class="box black"></div>
+        <div class="box"></div>
+        <div class="box black"></div>
+        <div class="box"></div>
+        <div class="box black"></div>
+
+        <div class="box black"></div>
+        <div class="box"></div>
+        <div class="box black"></div>
+        <div class="box"></div>
+        <div class="box black"></div>
+        <div class="box"></div>
+        <div class="box black"></div>
+        <div class="box"></div>
+
+        <!-- Seventh row -->
+        <div class="box">&#9823</div>
+        <div class="box black">&#9823</div>
+        <div class="box">&#9823</div>
+        <div class="box black">&#9823</div>
+        <div class="box">&#9823</div>
+        <div class="box black">&#9823</div>
+        <div class="box">&#9823</div>
+        <div class="box black">&#9823</div>
+
+        <!-- Eighth row -->
+        <div class="box black">&#9820</div>
+        <div class="box">&#9822</div>
+        <div class="box black">&#9821</div>
+        <div class="box">&#9819</div>
+        <div class="box black">&#9818</div>
+        <div class="box">&#9821</div>
+        <div class="box black">&#9822</div>
+        <div class="box">&#9820</div>
+    </div>
+</body>
+</html>
